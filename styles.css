@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: rgb(233, 196, 137);
+  font-size: 2.5em;
+}
+
+.title {
+  font-family: "Fredericka the Great", cursive;
+  font-size: 2.2em;
+  letter-spacing: 3px;
+  text-align: center;
+  padding: 20px;
+  color: maroon;
+  text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.35);
+}
+
+.btn-container {
+  border-bottom: 3px solid maroon;
+  border-top: 3px solid maroon;
+  height: 2.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5%;
+}
+
+.btn {
+  font-size: 1.1rem;
+  color: maroon;
+  background-color: blanchedalmond;
+  letter-spacing: 1px;
+  font-weight: bold;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.35);
+  border: 2px solid maroon;
+  border-radius: 10px;
+  width: 6em;
+  height: 2.25em;
+}
+
+.btn:hover {
+  background-color: oldlace;
+}
+
+#container {
+  margin: 1em auto 0;
+  height: 512px;
+  width: 512px;
+  border-top: 2px solid maroon;
+  border-left: 2px solid maroon;
+  border-right: 3px solid maroon;
+  border-bottom: 3px solid maroon;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.35);
+}
+
+.square {
+  border-top: 1px solid maroon;
+  border-left: 1px solid maroon;
+  background: cornsilk;
+}
+
+@media (max-width: 680px) {
+  body {
+    height: 100vh;
+  }
+
+  .title {
+    font-size: 1.1em;
+    letter-spacing: 2px;
+  }
+
+  .btn-container {
+    min-height: 20vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border: none;
+  }
+
+  .btn {
+    font-size: 14px;
+    margin: 2px;
+  }
+
+  .btn:focus {
+    background-color: oldlace;
+  }
+
+  #container {
+    width: 360px;
+    height: 360px;
+    margin-top: 30px;
+  }
+}
