@@ -67,6 +67,7 @@ body {
 @media (max-width: 680px) {
   body {
     height: 90vh;
+    height: 100svh;
   }
 
   .title {

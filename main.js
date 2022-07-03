@@ -92,9 +92,11 @@ function resetDivs() {
 function eraseDivs() {
   const squares = document.querySelectorAll(".square");
   squares.forEach((square) => {
+    square.addEventListener("pointerdown", (event) => {
+      square.releasePointerCapture(event.pointerID);
+    });
     square.addEventListener("pointerover", (event) => {
-      event.stopPropagation();
-      square.style.background = "cornsilk";
+      square.style.background = "black";
     });
   });
 }
@@ -144,9 +146,11 @@ function lessDivs(event) {
 function whiteDivs() {
   const squares = document.querySelectorAll(".square");
   squares.forEach((square) => {
+    square.addEventListener("pointerdown", (event) => {
+      square.releasePointerCapture(event.pointerID);
+    });
     square.addEventListener("pointerover", (event) => {
-      event.stopPropagation();
-      square.style.background = "white";
+      square.style.background = "black";
     });
   });
 }
@@ -154,8 +158,10 @@ function whiteDivs() {
 function blackDivs() {
   const squares = document.querySelectorAll(".square");
   squares.forEach((square) => {
+    square.addEventListener("pointerdown", (event) => {
+      square.releasePointerCapture(event.pointerID);
+    });
     square.addEventListener("pointerover", (event) => {
-      event.stopPropagation();
       square.style.background = "black";
     });
   });
@@ -169,9 +175,11 @@ function coloredDivs() {
   const randomColor = `rgb(${r}, ${g}, ${b})`;
 
   squares.forEach((square) => {
+    square.addEventListener("pointerdown", (event) => {
+      square.releasePointerCapture(event.pointerID);
+    });
     square.addEventListener("pointerover", (event) => {
-      event.stopPropagation();
-      square.style.background = randomColor;
+      square.style.backgroundColor = randomColor;
     });
   });
 }
