@@ -66,25 +66,25 @@ body {
 
 @media (max-width: 680px) {
   body {
-    height: 100vh;
+    height: 90vh;
   }
 
   .title {
-    font-size: 1.1em;
-    letter-spacing: 2px;
+    font-size: 1em;
+    letter-spacing: 1px;
+    padding: 10px 0;
   }
 
   .btn-container {
-    min-height: 20vh;
+    height: 15%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     border: none;
   }
 
   .btn {
-    font-size: 14px;
-    margin: 2px;
+    font-size: 12px;
   }
 
   .btn:focus {
@@ -92,8 +92,8 @@ body {
   }
 
   #container {
-    width: 360px;
-    height: 360px;
+    width: 340px;
+    height: 340px;
     margin-top: 30px;
   }
 }
