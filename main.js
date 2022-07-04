@@ -69,8 +69,9 @@ btnContainer.addEventListener("click", (event) => {
 // I need num to be available everywhere
 var num = 16;
 
+const container = document.getElementById("container");
+
 function makeDivs() {
-  container.style.display = "grid";
   container.style.gridTemplateRows = `repeat(${num}, 1fr)`;
   container.style.gridTemplateColumns = `repeat(${num}, 1fr)`;
   for (let i = 0; i < num * num; i++) {
@@ -92,11 +93,8 @@ function resetDivs() {
 function eraseDivs() {
   const squares = document.querySelectorAll(".square");
   squares.forEach((square) => {
-    square.addEventListener("pointerdown", (event) => {
-      square.releasePointerCapture(event.pointerID);
-    });
-    square.addEventListener("pointerover", (event) => {
-      square.style.background = "black";
+    square.addEventListener("pointerover", () => {
+      square.style.background = "cornsilk";
     });
   });
 }
@@ -146,11 +144,8 @@ function lessDivs(event) {
 function whiteDivs() {
   const squares = document.querySelectorAll(".square");
   squares.forEach((square) => {
-    square.addEventListener("pointerdown", (event) => {
-      square.releasePointerCapture(event.pointerID);
-    });
-    square.addEventListener("pointerover", (event) => {
-      square.style.background = "black";
+    square.addEventListener("pointerover", () => {
+      square.style.background = "white";
     });
   });
 }
@@ -158,11 +153,8 @@ function whiteDivs() {
 function blackDivs() {
   const squares = document.querySelectorAll(".square");
   squares.forEach((square) => {
-    square.addEventListener("pointerdown", (event) => {
-      square.releasePointerCapture(event.pointerID);
-    });
-    square.addEventListener("pointerover", (event) => {
-      square.style.background = "black";
+    square.addEventListener("pointerover", () => {
+      square.style.backgroundColor = "black";
     });
   });
 }
@@ -175,10 +167,7 @@ function coloredDivs() {
   const randomColor = `rgb(${r}, ${g}, ${b})`;
 
   squares.forEach((square) => {
-    square.addEventListener("pointerdown", (event) => {
-      square.releasePointerCapture(event.pointerID);
-    });
-    square.addEventListener("pointerover", (event) => {
+    square.addEventListener("pointerover", () => {
       square.style.backgroundColor = randomColor;
     });
   });
